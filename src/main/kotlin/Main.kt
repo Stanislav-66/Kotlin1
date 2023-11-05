@@ -1,17 +1,17 @@
-//task1
-fun fizzbuz(n : Int = 0) : Array<String>
-{
-    val array = Array(n){0}
-    val arrayAnswer = Array(n){""}
-    var b = 0
-    for (i in array.indices)
-        array[i] = b++
-    array.forEach { item -> if(item % 3 == 0 && item % 5 == 0) arrayAnswer[item] = "FizzBuzz"
-                            else if(item % 3 == 0) arrayAnswer[item] = "Fizz"
-                            else if(item % 5 == 0) arrayAnswer[item] = "Buzz"
-                            else arrayAnswer[item] = item.toString()}
-    return arrayAnswer
-}
+//Task1
+ fun fizzbuz(n : Int = 0) : Array<String>
+ {
+     val array = Array(n){0}
+     val arrayAnswer = Array(n){""}
+     var b = 0
+     for (i in array.indices)
+         array[i] = b++
+     array.forEach { item -> if(item % 3 == 0 && item % 5 == 0) arrayAnswer[item] = "FizzBuzz"
+                             else if(item % 3 == 0) arrayAnswer[item] = "Fizz"
+                             else if(item % 5 == 0) arrayAnswer[item] = "Buzz"
+                             else arrayAnswer[item] = item.toString()}
+     return arrayAnswer
+ }
 //task2
 fun sumofTwo (numbers : IntArray, target: Int) : IntArray
 {
