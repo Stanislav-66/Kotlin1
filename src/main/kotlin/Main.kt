@@ -12,24 +12,24 @@
                              else arrayAnswer[item] = item.toString()}
      return arrayAnswer
  }
-//task2
-fun sumofTwo (numbers : IntArray, target: Int) : IntArray
-{
-    val answer = IntArray(numbers.size)
-    val debag = IntArray(numbers.size)
-    for (i in numbers.indices) {
-        for (j in i + 1..<numbers.size) {
-            if (numbers[i] + numbers[j] == target) {
-                debag[i]++
-                debag[j]++
-                answer[i] = i
-                answer[j] = j
-            }
-        }
-    }
-    return if(debag.any { it != 0 })answer else throw IllegalArgumentException("Нет подходящих значений")
+//Task2
+ fun sumofTwo (numbers : IntArray, target: Int) : IntArray
+ {
+     val answer = IntArray(numbers.size)
+     val debag = IntArray(numbers.size)
+     for (i in numbers.indices) {
+         for (j in i + 1..<numbers.size) {
+             if (numbers[i] + numbers[j] == target) {
+                 debag[i]++
+                 debag[j]++
+                 answer[i] = i
+                 answer[j] = j
+             }
+         }
+     }
+     return if(debag.any { it != 0 })answer else throw IllegalArgumentException("Нет подходящих значений")
 
-}
+ }
 
 
 fun main() {
